@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap');
+
+
+body {
+ 
+    font-family: 'Roboto Mono', monospace;
+}
+
+body {
+    height: 100vh;
+    width: 90vw;
+    background: linear-gradient(-45deg, #5e0878, #085078, #4ca59b, #1fa194);
+    background-size: 400% 400%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: backgroundTransition 10s ease-in-out infinite;
+}
+.photo{
+	margin-top: 50px; 
+	border: 1px solid #000000;
+	border-radius: 100px
+	
+}
+.wrapper h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}	
+.wrapper h2 {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+	
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+h2{
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.social-media{
+	
+    margin-top: 1rem;
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+    color: #ffff;
+    font-size:  24px;
+    padding: 1rem 4rem;
+    border: 1px solid #ffff;
+    min-width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s cubic-bezier(0.55, 0.025, 0.075, 0.98);
+}
+
+a:hover {
+    color: #085078;
+    background-color: #ffff ;
+
+}
+
+
+@keyframes backgroundTransition {
+    0% {
+        background-position: 0% 80%;
+    }
+    50% {
+        background-position: 88% 100%;
+    }
+    100% {
+        background-position: 0% 90%;
+    }
+}
+
+
+
+  .container{
+    display: flex;
+	justify-content: center;
+    align-items: center;	
+  }
+  
+  .card{
+	height: 500px;
+    width: 500px;  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    display: flex;
+    justify-content: center;	
+	align-items: center;
+	filter: grayscale(0.6);
+	color: white;
+	cursor: pointer;
+	transition: 0.3s;
+	
+  }
+  .card-wrapper{
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+  }
+  
+  .card-wrapper::before{
+	 content: '';
+	 position: absolute;
+	 height: 200px;
+	 width: 200px;
+	 display: block;
+	 border: 1px solid white;
+	 opacity: 0;
+	 transition: 0.3s;
+  }
+  
+  
+  .card-wrapper h2{
+	 font-size: 40px;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+     margim: 0;
+     transition: 0.3s;	 
+  }
+  
+  .card-wrapper p{
+	 font-size: 0;
+	 text-align: justify;
+	 visibility: hidden;
+	 opacity: 0;
+	 font-weight: bold;
+	 text-transform: uppercase;
+	 transition: 0.1s;
+  }
+  
+  .card:hover{
+	  filter: unset;
+  }
+  
+  .card:hover > .card-wrapper::before{
+	  height: 400px;
+	  width: 500px;
+	  opacity: 1;
+  }
+  
+  .card:hover > .card-wrapper h2 {
+    opacity: 5;
+    visibility: visible;
+    font-size: 16px;	
+  }
+  
+  .card:hover > .card-wrapper p {
+	height: 140px;
+	margin: 15px 15px 15px 15px;
+	word-spacing: -6px;
+    opacity: 1;
+    visibility: visible;
+    font-size: 14px;	
+  }
