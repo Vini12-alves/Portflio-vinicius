@@ -7,10 +7,10 @@ body {
 }
 
 body {
-    height: 100vh;
+    height: 180vh;
     width: 90vw;
     background: linear-gradient(-45deg, #5e0878, #085078, #4ca59b, #1fa194);
-    background-size: 400% 400%;
+    background-size: 800% 800%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,7 +18,7 @@ body {
     animation: backgroundTransition 10s ease-in-out infinite;
 }
 .photo{
-	margin-top: 50px; 
+    
 	border: 1px solid #000000;
 	border-radius: 100px
 	
@@ -94,7 +94,6 @@ a:hover {
   .card{
 	height: 500px;
     width: 500px;  
-    background-position: center;
     background-repeat: no-repeat;
     background-size: cover; 
     display: flex;
